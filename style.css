@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'eurocaps';
+  src: url('fonts/EUROCAPS.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+    background-color: rgb(24, 24, 24);
+    z-index: 1;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'eurocaps', serif;
+}
+
+.navbar{
+    background-color: rgb(24, 24, 24);
+    height:70px;
+    width: 100%;
+    border: 1px;
+    border-color: aliceblue;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+}
+.logo{
+    color: whitesmoke;
+    text-align: center;
+    margin-left: 22px;
+    font-size: 42px;
+
+}
+.middle{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+}
+.side_panel{ 
+  
+    background-color: rgb(24, 24, 24);
+    height: 100%;
+    width: 250px;
+    z-index: 200;
+
+    display:flexbox;
+    flex-direction: column;
+
+    text-align: center;
+    align-items: top;
+    align-content: top;
+        
+    border: 1px;
+    border-color: aliceblue;
+    border-style: solid;
+}
+
+.pLink{
+    margin: 13px;
+    color: whitesmoke;
+    
+    
+}
+
+.pLink a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.content{
+  flex-grow: 1;
+  background: #1f1e1e;
+  color: whitesmoke;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+
+
+  align-items: top;
+  align-content: top;
+  text-align: center;
+
+    border: 1px;
+    border-color: aliceblue;
+    border-style: solid;
+}
+
+.Hero{
+    font-size: 45px;
+}
