@@ -9,6 +9,7 @@ body{
     background-color: rgb(24, 24, 24);
     z-index: 1;
     overflow-x: hidden;
+    overflow-y: hidden;
     margin: 0;
     font-family: 'eurocaps', serif;
 }
@@ -17,7 +18,9 @@ body{
     background-color: rgb(24, 24, 24);
     height:70px;
     width: 100%;
-    border: 1px;
+    border: 0;
+    border-bottom: 1px;
+
     border-color: aliceblue;
     border-style: solid;
     display: flex;
@@ -51,10 +54,11 @@ body{
     text-align: center;
     align-items: top;
     align-content: top;
-        
-    border: 1px;
+    border: 0;
+    border-right: 1px;
     border-color: aliceblue;
     border-style: solid;
+
 }
 
 .pLink{
