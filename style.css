@@ -41,11 +41,12 @@ body{
   
     background-color: rgb(24, 24, 24);
     height: 100%;
-    width: 250px;
+    width: 220px;
     z-index: 200;
 
     display:flexbox;
     flex-direction: column;
+    flex-shrink: 0;
 
     text-align: center;
     align-items: top;
@@ -66,6 +67,10 @@ body{
 .pLink a {
     color: whitesmoke;
     text-decoration: none;
+}
+
+#current{
+    color: rgb(208, 158, 255);
 }
 
 .content{
