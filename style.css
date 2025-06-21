@@ -41,6 +41,7 @@ body{
  color: whitesmoke;
  font-size: 35px;
  margin: 20px;
+ caret-color: transparent;
  
 }
 
@@ -49,6 +50,7 @@ body{
     text-align: center;
     margin-left: 22px;
     font-size: 42px;
+    caret-color: transparent;
 
 }
 .middle{
@@ -91,12 +93,19 @@ body{
   transform: translateX(-100%);
   opacity: 0;
   pointer-events: none;
+  position: fixed;
   /* no transition or delay here! */
 }
 #sidebar-toggle:checked ~ .content  {
-  transform: translateX(-5%);
-  /* no transition or delay here! */
+  margin-right: 110px;
+  margin-left: 110px;
 }
+#sidebar-toggle:checked ~ .rightside-buttons  {
+  color: rgb(39, 247, 177);
+  display: none;
+  position: sticky;
+}
+
 
 .pLink{
     margin: 13px;
@@ -125,16 +134,15 @@ body{
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-
-
   align-items: top;
   align-content: top;
   text-align: center;
 
-      transition:
-       transform 0.4s ease-in-out,
-       opacity 0.4s ease-in-out;
- 
+      transition: margin 0.4s ease-in-out;
+
+
+
+
 }
 
 .Hero{
