@@ -4,7 +4,8 @@
   font-weight: normal;
   font-style: normal;
 }
-
+input{visibility: hidden; opacity: 0;
+position: fixed;}
 body{
     background-color: rgb(24, 24, 24);
     z-index: 1;
@@ -25,9 +26,24 @@ body{
     border-style: solid;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     align-content: center;
 
 }
+
+#rightsiders{
+    display: flex;
+    text-align:center;
+    margin-right: 1px;
+}
+
+.rightside-buttons{
+ color: whitesmoke;
+ font-size: 35px;
+ margin: 20px;
+ 
+}
+
 .logo{
     color: whitesmoke;
     text-align: center;
@@ -37,28 +53,49 @@ body{
 }
 .middle{
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     display: flex;
+    background: #1f1e1e;
+
 }
 .side_panel{ 
   
     background-color: rgb(24, 24, 24);
     height: 100%;
     width: 220px;
-    z-index: 200;
-
-    display:flexbox;
+    z-index: 2;
+    
+    display:flex;
     flex-direction: column;
     flex-shrink: 0;
 
     text-align: center;
-    align-items: top;
-    align-content: top;
+    
     border: 0;
     border-right: 1px;
     border-color: aliceblue;
     border-style: solid;
 
+
+  transform: translateX(0%);
+  transition: transform 0.4s ease-in-out;
+  pointer-events: auto;
+  opacity: 1;
+
+    transition:
+      transform 0.4s ease-in-out,
+      opacity 0.4s ease-in-out;
+}
+
+#sidebar-toggle:checked ~ .side_panel  {
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  /* no transition or delay here! */
+}
+#sidebar-toggle:checked ~ .content  {
+  transform: translateX(-5%);
+  /* no transition or delay here! */
 }
 
 .pLink{
@@ -94,6 +131,9 @@ body{
   align-content: top;
   text-align: center;
 
+      transition:
+       transform 0.4s ease-in-out,
+       opacity 0.4s ease-in-out;
  
 }
 
@@ -118,3 +158,69 @@ body{
     height: 450px;
     width: 600px;
 }
+
+
+
+
+
+
+
+
+
+
+
+  .crt::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 3;
+  background-size: 100% 2.4px, 3px 100%;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0% {
+  opacity: 0.37861;
+  }
+  5% {
+  opacity: 0.44769;
+  }
+  10% {
+  opacity: 0.33604;
+  }
+  15% {
+  opacity: 0.20626;
+  }
+  20% {
+  opacity: 0.28128;
+  }
+  25% {
+  opacity: 0.20626;
+  }
+  30% {
+  opacity: 0.28128;
+  }
+  35% {
+  opacity: 0.33604;
+  }
+}
+
+.crt::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 3;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+} 
