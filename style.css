@@ -42,7 +42,9 @@ body{
  font-size: 35px;
  margin: 20px;
  caret-color: transparent;
- 
+ user-select: none;
+ cursor: pointer;
+ text-decoration: none;
 }
 
 .logo{
@@ -51,6 +53,7 @@ body{
     margin-left: 22px;
     font-size: 42px;
     caret-color: transparent;
+    user-select: none;
 
 }
 .middle{
@@ -100,11 +103,6 @@ body{
   margin-right: 110px;
   margin-left: 110px;
 }
-#sidebar-toggle:checked ~ .rightside-buttons  {
-  color: rgb(39, 247, 177);
-  display: none;
-  position: sticky;
-}
 
 
 .pLink{
@@ -120,7 +118,7 @@ body{
 }
 
 #current{
-    color: rgb(208, 158, 255);
+    color: rgb(178, 252, 255);
 }
 
 .content{
@@ -142,7 +140,7 @@ body{
 
 
 
-
+ 
 }
 
 .Hero{
@@ -167,7 +165,9 @@ body{
     width: 600px;
 }
 
-
+.b8831{
+  padding-bottom: 200px;
+}
 
 
 
