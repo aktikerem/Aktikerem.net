@@ -211,7 +211,7 @@ background-color: #080a0e;
 }
 
 #imagee{
-    height: 450px;
+    height: auto;
     width: 600px;
 }
 #imagee2{
@@ -234,6 +234,23 @@ background-color: #080a0e;
 .middlee{
   margin: 5px;
 }
+.logo{
+  font-size: 28px;
+}
+.rightside-buttons{
+  font-size: 24px;
+}
+
+#imagee2{
+  width: calc(200px);
+  height: auto;
+}
+
+#imagee{
+  width: 250px;
+  height: auto;
+}
+
 }
 
 
