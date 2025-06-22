@@ -266,28 +266,28 @@ background-color: #080a0e;
 
 @keyframes flicker {
   0% {
-  opacity: 0.37861;
+  opacity: 0.27061;
   }
   5% {
-  opacity: 0.44769;
+  opacity: 0.34069;
   }
   10% {
-  opacity: 0.33604;
+  opacity: 0.23004;
   }
   15% {
-  opacity: 0.20626;
+  opacity: 0.10026;
   }
   20% {
-  opacity: 0.28128;
+  opacity: 0.18028;
   }
   25% {
-  opacity: 0.20626;
+  opacity: 0.10026;
   }
   30% {
-  opacity: 0.28128;
+  opacity: 0.1428;
   }
   35% {
-  opacity: 0.33604;
+  opacity: 0.20604;
   }
 }
 
@@ -306,3 +306,37 @@ background-color: #080a0e;
   animation: flicker 0.15s infinite;
 
 } 
+
+.rainbow-text {
+  display: inline;
+  font-weight: bold;
+  background: linear-gradient(
+    270deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  background-size: 1400% 1400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+  animation: rainbowAnimation 4s linear infinite;
+}
+
+@keyframes rainbowAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
